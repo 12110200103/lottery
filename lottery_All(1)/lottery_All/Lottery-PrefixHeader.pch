@@ -1,0 +1,21 @@
+//
+//  Lottery-PrefixHeader.pch
+//  lottery
+//
+//  Created by 王涛 on 16/5/4.
+//  Copyright © 2016年 raoyu. All rights reserved.
+//
+
+#ifndef Lottery_PrefixHeader_pch
+#define Lottery_PrefixHeader_pch
+
+#import "WinSize.h"
+#define wScale [WinSize initWithScreenSizeWidth]
+#define hScale [WinSize initWithScreenSizeHeight]
+
+#define fontE [UIFont systemFontOfSize:[WinSize initWithScreenSizeHeight]*36];
+#define fontT [UIFont systemFontOfSize:[WinSize initWithScreenSizeHeight]*44];
+#define fontS [UIFont systemFontOfSize:[WinSize initWithScreenSizeHeight]*32];
+
+
+#endif /* Lottery_PrefixHeader_pch */

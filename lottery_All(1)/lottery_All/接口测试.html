@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="http://test.nsscn.org/zc/index.php?act=login" method="post" >
+<input type="text" name="username"/>
+<input type="text" name="password"/>
+<input type="text" name="client" value="android"/>
+<input type="submit"/>
+</form>
+
+<form action="http://localhost/zc/index.php?act=plans&op=plans_list" method="post" >
+<input type="text" name="all" value=""/>
+<input type="text" name="order" value="1"/>
+<input type="text" name="page" value="10"/>
+<input type="text" name="curpage" value="0"/>
+<input type="submit"/>
+</form>
+
+
+
+注册：<form action="http://test.nsscn.org/zc/index.php?act=login&op=register" method="post" >
+<input type="text" name="username" />
+<input type="text" name="password" />
+<input type="text" name="password_confirm" />
+<input type="text" name="email" />
+电话
+<input type="text" name="member_phone_number" />
+<input type="text" name="client" value="android"/>
+<input type="submit"/>
+</form>
+
+修改密码：<form action="http://test.nsscn.org/zc/index.php?act=login&op=change_password" method="post" >
+key<input type="text" name="key" />
+新密码<input type="text" name="password" />
+<input type="submit"/>
+</form>
+修改密码：输入验证码：<form action="http://test.nsscn.org/zc/index.php?act=login&op=click2" method="post" >
+key<input type="text" name="key" />
+新密码<input type="text" name="token" />
+<input type="submit"/>
+</form>
+
+获取列表带详细
+<form action="http://test.nsscn.org/zc/index.php?act=plans&op=plans_list2" method="post" >
+<input type="text" name="all" value=""/>
+<input type="text" name="order" value="1"/>
+<input type="text" name="page" value="10"/>
+<input type="text" name="curpage" value="0"/>
+<input type="submit"/>
+</form>
+
+
+商品详细信息：
+<form action="http://test.nsscn.org/zc/index.php?act=plans&op=plans_detail" method="post" >
+<input type="text" name="plans_id" />
+<input type="submit"/>
+</form>
+</body>
+</html>
+
+<!--plans_id,众筹id，plans_num 买的数量 ， key-->
+新增订单
+<form action="http:/test.nsscn.org/zc/index.php?act=order&op=create_order" method="post" >
+<input type="text" name="plans_id" />
+<input type="text" name="plans_num" />
+<input type="text" name="key" />
+<input type="submit"/>
+</form>
+消息中心
+<form action="http://test.nsscn.org/zc/index.php?act=message&op=get_message" method="post" >
+<input type="text" name="key" />
+<input type="text" name="page" value="10"/>
+<input type="text" name="curpage" value="0"/>
+<input type="text" name="all" />
+<input type="submit"/>
+</form>
+中奖纪录：
+<form action="http://test.nsscn.org/zc/index.php?act=message&op=get_the_winning_record_message" method="post" >
+<input type="text" name="key" />
+<input type="text" name="page" value="10"/>
+<input type="text" name="curpage" value="0"/>
+<input type="text" name="all" />
+<input type="submit"/>
+</form>
+投足：
+<form action="http://test.nsscn.org/zc/index.php?act=message&op=get_bay_info_message" method="post" >
+<input type="text" name="key" />
+<input type="text" name="page" value="10"/>
+<input type="text" name="curpage" value="0"/>
+<input type="text" name="all" />
+<input type="submit"/>
+</form>
+账户余额：
+<form action="http://test.nsscn.org/zc/index.php?act=message&op=get_money" method="post" >
+<input type="text" name="key" />
+<input type="submit"/>
+</form>
+
+历史纪录:
+<form action="http://test.nsscn.org/zc/index.php?act=allocation&op=get_historic_records" method="post" >
+<input type="text" name="type" />
+<input type="text" name="time" />
+<input type="text" name="page" />
+<input type="text" name="curpage" />
+<input type="submit"/>
+</form>
+
+资金明细:
+<form action="http://test.nsscn.org/zc/index.php?act=message&op=get_capital_subsidiary" method="post" >
+type:<input type="text" name="type" /><!--1：全部；2：购彩；3:购彩；4:提现-->
+key:<input type="text" name="key" />
+time:<input type="text" name="time" />
+<input type="text" name="page" value="10"/>
+<input type="text" name="curpage" value="0"/>
+<input type="submit"/>
+</form>
+
+银联支付:
+<form action="http://test.nsscn.org/zc/index.php?act=order&op=payment" method="post" >
+<input type="text" name="title" />
+<input type="text" name="amt" />
+<input type="text" name="orderId" />
+<input type="submit"/>
+</form>
+
+
+
+银联支付付钱：
+<form action="http://116.228.21.162:9127/umsFrontWebQmjf/umspay" method="post" >
+签名:<input id="merSign" name="merSign" type="text">
+特征码:<input id="chrCode" name="chrCode" type="text" >
+订单号:<input id="tranId" name="tranId" type="text" >
+ 商 户 地 址 : <input id="url" name="url" type="text" value="http://www.baidu.com">
+ 商 户 用 户 号 : <input type="text">
+ 银 行 名 称 : <input value="gongshang">
+ 银 行 卡 类 型 : <input value="d">
+ <input type="submit"/>
+
+</form>
+
+天堂支付
+<form action="http:/test.nsscn.org/zc/index.php?act=order&op=chinapay_tt" method="post" >
+<input type="text" name="plans_id" />
+<input type="text" name="plans_num" />
+<input type="text" name="key" />
+<input type="submit"/>
+</form>
+</body>
+
+
+
+修改密码(原来点邮箱 现在改验证码)：<form action="http://test.nsscn.org/zc/index.php?act=login&op=change_password2" method="post" >
+username<input type="text" name="username" />
+新密码<input type="text" name="password" />
+邮箱<input type="text" name="email" />
+<input type="submit"/>
+</form>
+修改密码(原来点邮箱 现在改验证码)：<form action="http://test.nsscn.org/zc/index.php?act=login&op=click3" method="post" >
+username<input type="text" name="username" />
+验证码<input type="text" name="token" />
+<input type="submit"/>
+</form>
+修改密码(知道原密码)：<form action="http://test.nsscn.org/zc/index.php?act=login&op=change_password3" method="post" >
+key<input type="text" name="key" />
+老密码<input type="text" name="password" />
+新密码<input type="text" name="new_password" />
+<input type="submit"/>
+</form>
+
+反馈：<form action="http://test.nsscn.org/zc/index.php?act=message&op=feedback" method="post" >
+key<input type="text" name="key" />
+title<input type="text" name="title" />
+body<input type="text" name="body" />
+<input type="submit"/>
+</form>
+
+完善个人信息：<form action="http://test.nsscn.org/zc/index.php?act=login&op=perfect" method="post" >
+key<input type="text" name="key" />
+gender<input type="text" name="gender" />
+age<input type="text" name="age" />
+province<input type="text" name="province" />
+city<input type="text" name="city" />
+professional<input type="text" name="professional" />
+company/school<input type="text" name="company/school" />
+<input type="submit"/>
+</form>
+
+获取个人信息：<form action="http://test.nsscn.org/zc/index.php?act=login&op=get_perfect" method="post" >
+key<input type="text" name="key" />
+<input type="submit"/>
+</form>
+
+添加银行卡:<form action="http://test.nsscn.org/zc/index.php?act=bank&op=add_bank_info" method="post" >
+key<input type="text" name="key" />
+type<input type="text" name="type" />
+name<input type="text" name="name" />
+card_number<input type="text" name="card_number" />
+<input type="submit"/>
+</form>
+添加银行卡:输入验证码：<form action="http://test.nsscn.org/zc/index.php?act=bank&op=click" method="post" >
+key<input type="text" name="key" />
+type<input type="text" name="token" />
+<input type="submit"/>
+</form>
+获取银行卡信息：<form action="http://test.nsscn.org/zc/index.php?act=bank&op=get_info_list" method="post" >
+key<input type="text" name="key" />
+<input type="submit"/>
+</form>
+申请提钱：<form action="http://test.nsscn.org/zc/index.php?act=account_transfer&op=submission_requested" method="post" >
+key<input type="text" name="key" />
+num<input type="text" name="num" />
+card_type<input type="text" name="card_type" />
+card_number<input type="text" name="card_number" />
+<input type="submit"/>
+</form>
+</html>
